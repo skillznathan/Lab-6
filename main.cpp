@@ -24,3 +24,24 @@ int main() {
 
     return 0;
 }
+
+/*
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ g++ main.cpp player.cpp -o program
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ ./program
+Default constructor called.
+Overloaded constructor called.
+--- Initial Status ---
+[Hero] - HP: 100/100
+[Gandalf] - HP: 120/120
+
+--- Hero takes damage! ---
+[Hero] - HP: 75/100
+
+--- Wizard takes damage! ---
+Gandalf falls to the ground, defeated.
+[Gandalf] - HP: 0/120
+
+The object for Player Gandalf has been destroyed.
+The object for Player Hero has been destroyed.
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ 
+*/

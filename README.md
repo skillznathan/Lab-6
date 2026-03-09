@@ -1,2 +1,2 @@
-# Lab-6-RPGPART1
+# Lab-6
 All files

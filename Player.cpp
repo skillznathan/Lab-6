@@ -1,28 +1,26 @@
 #include "Player.h"
 #include <iostream>
 
-using namespace std;
-
-// Updated Constructor with initializer list for inventory
-Player::Player(string name, int health) 
-    : name(name), health(health), inventory(5) { // Giving capacity of 5
-    cout << "Default constructor called for Player." << endl;
-}
-
-Player::~Player() {
-    cout << "Player " << name << " has been destroyed." << endl;
-}
-
-void Player::showInventory() const {
-    cout << "--- Hero's Inventory ---" << endl;
-    inventory.display();
+Player::Player(std::string name, int health)
+    : name(name), health(health), inventory(5)
+{
+    std::cout << "Default constructor called for Player." << std::endl;
 }
 
 void Player::addItem(const Item& item) {
-    if(inventory.addItem(item)) {
-        cout << "Hero found a ";
+
+    if (inventory.addItem(item)) {
+        std::cout << name << " found a ";
         item.display();
-    } else {
-        cout << "Inventory full! Cannot add " << item.getName() << endl;
     }
+}
+
+void Player::showInventory() const {
+
+    std::cout << "\n--- " << name << "'s Inventory ---" << std::endl;
+    inventory.display();
+}
+
+Player::~Player() {
+    std::cout << "Player " << name << " has been destroyed." << std::endl;
 }

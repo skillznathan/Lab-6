@@ -5,13 +5,13 @@
 
 class Inventory {
 private:
-    Item* items; // Pointer to dynamic array
+    Item* items;
     int capacity;
     int itemCount;
 
 public:
     Inventory(int capacity);
-    ~Inventory(); // Destructor for dynamic memory
+    ~Inventory();
 
     bool addItem(const Item& item);
     void display() const;

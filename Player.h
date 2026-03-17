@@ -5,18 +5,19 @@
 #include "Inventory.h"
 
 class Player {
+
 private:
     std::string name;
     int health;
-    Inventory inventory; // Aggregation
+    Inventory inventory;
 
 public:
-    // Constructor updated to initialize inventory
     Player(std::string name, int health);
-    ~Player();
 
-    void showInventory() const;
     void addItem(const Item& item);
+    void showInventory() const;
+
+    ~Player();
 };
 
 #endif

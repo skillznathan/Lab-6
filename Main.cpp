@@ -3,26 +3,49 @@
 #include <iostream>
 
 int main() {
-    // 1. Create Player
+
     Player hero("Hero", 100);
 
-    // 2. Create Items
-    Item i1("Sword", 10);
-    Item i2("Shield", 15);
-    Item i3("Potion", 5);
+    Item sword("Sword", 10);
+    Item shield("Shield", 15);
+    Item potion("Potion", 5);
 
-    std::cout << "--- Adding items to hero's inventory ---" << std::endl;
-    
-    // 3. Add items
-    hero.addItem(i1);
-    hero.addItem(i2);
-    hero.addItem(i3);
+    std::cout << "\n--- Adding items to hero's inventory ---" << std::endl;
 
-    // 4. Display Inventory
+    hero.addItem(sword);
+    hero.addItem(shield);
+
+    std::cout << std::endl;
+
     hero.showInventory();
 
-    // 5. Test Static Member
-    std::cout << "Total items added to inventories: " << Item::getTotalItems() << std::endl;
+    std::cout << "\nTotal items added to inventories: "
+              << Item::getTotalItems() << std::endl;
 
     return 0;
 }
+
+
+
+/*
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ g++ Inventory.cpp Item.cpp Main.cpp Player.cpp -o program
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ ./program
+Default constructor called for Player.
+
+--- Adding items to hero's inventory ---
+An item was added: Sword
+Hero found a [Sword] (Value: 10)
+An item was added: Shield
+Hero found a [Shield] (Value: 15)
+
+
+--- Hero's Inventory ---
+Inventory (2/5):
+  [Sword] (Value: 10)
+  [Shield] (Value: 15)
+
+Total items added to inventories: 2
+Player Hero has been destroyed.
+Inventory has been destroyed.
+@skillznathan ➜ /workspaces/Lab-6-RPGPART1 (main) $ 
+*/
